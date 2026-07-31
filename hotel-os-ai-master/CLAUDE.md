@@ -3,7 +3,7 @@
 
 **Hotel estoicos**
 
-HotelOS AI es un **sistema operativo hotelero single-tenant** para un hotel específico (no SaaS multi-hotel). Cubre las dos audiencias clásicas:
+Hotel Estoicos es un **sistema operativo hotelero single-tenant** para un hotel específico (no SaaS multi-hotel). Cubre las dos audiencias clásicas:
 
 - **Staff del hotel** (PMS — Property Management System): recepción, housekeeping, reservas internas, reportes y administración.
 - **Huéspedes** (Booking Engine público): búsqueda de disponibilidad y reserva online.
