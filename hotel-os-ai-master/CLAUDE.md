@@ -1,7 +1,7 @@
 <!-- GSD:project-start source:PROJECT.md -->
 ## Project
 
-**HotelOS AI**
+**Hotel estoicos**
 
 HotelOS AI es un **sistema operativo hotelero single-tenant** para un hotel específico (no SaaS multi-hotel). Cubre las dos audiencias clásicas:
 
