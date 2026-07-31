@@ -22,7 +22,7 @@ import path from 'path';
  * /socket.io is the default path for socket.io-client. We forward it with
  * ws: true so the HTTP→WS upgrade handshake survives the proxy.
  */
-const apiTarget = process.env.API_URL || 'http://localhost:3003';
+const apiTarget = process.env.API_URL || 'http://localhost:3001';
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
@@ -35,10 +35,10 @@ export default defineConfig({
     port: 5180,
     strictPort: true,
     proxy: {
-      '/api': 'http://localhost:3003',
-      '/images': 'http://localhost:3003',
+      '/api': 'http://localhost:3001',
+      '/images': 'http://localhost:3001',
       '/socket.io': {
-        target: 'http://localhost:3003',
+        target: 'http://localhost:3001',
         ws: true,
         changeOrigin: true,
       },

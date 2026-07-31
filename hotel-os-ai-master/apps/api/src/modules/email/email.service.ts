@@ -11,7 +11,7 @@ export interface BookingConfirmationParams {
   roomTypeName: string;
   totalNights: number;
   total: number;
-  // Phase 15 — guest preferences (all optional, all nullable — GCC-05)
+  // Phase 15 â€” guest preferences (all optional, all nullable â€” GCC-05)
   guestWhatsApp?: string | null;
   guestContactPreference?: 'EMAIL' | 'PHONE' | 'WHATSAPP' | null;
   guestDietaryRestrictions?: string | null;
@@ -40,7 +40,7 @@ export interface ReviewInviteParams {
 }
 
 /**
- * EmailService — Resend transactional email integration (PUB-05).
+ * EmailService â€” Resend transactional email integration (PUB-05).
  *
  * CRITICAL (Pitfall P4): sendBookingConfirmation NEVER throws.
  * Email failure must NOT roll back the reservation transaction.
@@ -55,8 +55,8 @@ export class EmailService {
   private readonly logger = new Logger(EmailService.name);
 
   constructor(private readonly config: ConfigService) {
-    this.resend = new Resend(this.config.getOrThrow<string>('RESEND_API_KEY'));
-    this.fromEmail = this.config.getOrThrow<string>('RESEND_FROM_EMAIL');
+    this.resend = new Resend(this.config.get<string>('RESEND_API_KEY') ?? 're_placeholder');
+    this.fromEmail = this.config.get<string>('RESEND_FROM_EMAIL') ?? 'noreply@placeholder.com';
   }
 
   /**
@@ -71,11 +71,11 @@ export class EmailService {
       await this.resend.emails.send({
         from: this.fromEmail,
         to: params.to,
-        subject: `Confirmación de reserva — ${params.reservationId}`,
+        subject: `ConfirmaciÃ³n de reserva â€” ${params.reservationId}`,
         html: this.buildConfirmationHtml(params),
       });
     } catch (err) {
-      // Pitfall P4: log but do NOT re-throw — email failure must not affect the reservation
+      // Pitfall P4: log but do NOT re-throw â€” email failure must not affect the reservation
       this.logger.error(
         `Failed to send booking confirmation to ${params.to} for reservation ${params.reservationId}`,
         err,
@@ -94,7 +94,7 @@ export class EmailService {
       await this.resend.emails.send({
         from: this.fromEmail,
         to: params.to,
-        subject: `Recordatorio: Tu estadía en ${this.escapeHtml(params.hotelName)} comienza mañana`,
+        subject: `Recordatorio: Tu estadÃ­a en ${this.escapeHtml(params.hotelName)} comienza maÃ±ana`,
         html: this.buildPreArrivalReminderHtml(params),
       });
     } catch (err) {
@@ -122,11 +122,11 @@ export class EmailService {
       : '';
 
     const addressHtml = params.hotelAddress
-      ? `<p style="font-size:14px;color:#5a4d3f;margin:6px 0;"><strong>Dirección:</strong> ${this.escapeHtml(params.hotelAddress)}</p>`
+      ? `<p style="font-size:14px;color:#5a4d3f;margin:6px 0;"><strong>DirecciÃ³n:</strong> ${this.escapeHtml(params.hotelAddress)}</p>`
       : '';
 
     const phoneHtml = params.hotelPhone
-      ? `<p style="font-size:14px;color:#5a4d3f;margin:6px 0;"><strong>Teléfono:</strong> ${this.escapeHtml(params.hotelPhone)}</p>`
+      ? `<p style="font-size:14px;color:#5a4d3f;margin:6px 0;"><strong>TelÃ©fono:</strong> ${this.escapeHtml(params.hotelPhone)}</p>`
       : '';
 
     return `<!DOCTYPE html>
@@ -139,17 +139,17 @@ export class EmailService {
 <body style="font-family: Geist, Arial, sans-serif; background: #f9f5f0; margin: 0; padding: 20px;">
   <div style="max-width: 600px; margin: 0 auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
     <div style="background: #2a221a; color: #faf7f2; padding: 32px; text-align: center;">
-      <h1 style="margin: 0; font-size: 26px; font-weight: normal; font-family: 'Instrument Serif', Georgia, serif; color: #faf7f2;">¡Nos vemos mañana!</h1>
+      <h1 style="margin: 0; font-size: 26px; font-weight: normal; font-family: 'Instrument Serif', Georgia, serif; color: #faf7f2;">Â¡Nos vemos maÃ±ana!</h1>
     </div>
     <div style="padding: 32px;">
       <p style="font-size: 16px; color: #333; margin-top: 0;">
-        Hola, <strong>${this.escapeHtml(params.guestName)}</strong>. Te recordamos que tu estadía en <strong>${this.escapeHtml(params.hotelName)}</strong> comienza mañana.
+        Hola, <strong>${this.escapeHtml(params.guestName)}</strong>. Te recordamos que tu estadÃ­a en <strong>${this.escapeHtml(params.hotelName)}</strong> comienza maÃ±ana.
       </p>
       <div style="margin: 24px 0; padding: 20px; background: #f4efe6; border-radius: 8px;">
         <h2 style="font-family: 'Instrument Serif', Georgia, serif; font-size: 18px; color: #2a221a; margin: 0 0 16px; font-weight: normal;">Detalles de tu reserva</h2>
         <p style="font-size:14px;color:#5a4d3f;margin:6px 0;"><strong>Check-in:</strong> ${formatDate(params.checkInDate)}</p>
         <p style="font-size:14px;color:#5a4d3f;margin:6px 0;"><strong>Check-out:</strong> ${formatDate(params.checkOutDate)}</p>
-        <p style="font-size:14px;color:#5a4d3f;margin:6px 0;"><strong>Habitación:</strong> ${this.escapeHtml(params.roomTypeName)}</p>
+        <p style="font-size:14px;color:#5a4d3f;margin:6px 0;"><strong>HabitaciÃ³n:</strong> ${this.escapeHtml(params.roomTypeName)}</p>
         <p style="font-size:14px;color:#5a4d3f;margin:6px 0;"><strong>Noches:</strong> ${params.totalNights}</p>
         ${addressHtml}
         ${phoneHtml}
@@ -159,7 +159,7 @@ export class EmailService {
         Si tienes alguna pregunta o necesitas modificar tu reserva, no dudes en contactarnos.
       </p>
       <p style="font-size: 14px; color: #999; margin-bottom: 0;">
-        ¡Te esperamos!
+        Â¡Te esperamos!
       </p>
     </div>
   </div>
@@ -179,7 +179,7 @@ export class EmailService {
       await this.resend.emails.send({
         from: this.fromEmail,
         to: params.to,
-        subject: `Cuéntanos sobre tu estadía en ${params.hotelName}`,
+        subject: `CuÃ©ntanos sobre tu estadÃ­a en ${params.hotelName}`,
         html: this.buildReviewInviteHtml(params),
       });
     } catch (err) {
@@ -207,25 +207,25 @@ export class EmailService {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cuéntanos sobre tu estadía</title>
+  <title>CuÃ©ntanos sobre tu estadÃ­a</title>
 </head>
 <body style="font-family: Geist, Arial, sans-serif; background: #f9f5f0; margin: 0; padding: 20px;">
   <div style="max-width: 600px; margin: 0 auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
     <div style="background: #2a221a; color: #faf7f2; padding: 32px; text-align: center;">
-      <h1 style="margin: 0; font-size: 26px; font-weight: normal; font-family: 'Instrument Serif', Georgia, serif; color: #faf7f2;">¡Gracias por tu visita!</h1>
+      <h1 style="margin: 0; font-size: 26px; font-weight: normal; font-family: 'Instrument Serif', Georgia, serif; color: #faf7f2;">Â¡Gracias por tu visita!</h1>
     </div>
     <div style="padding: 32px;">
       <p style="font-size: 16px; color: #333; margin-top: 0;">
-        Hola, <strong>${this.escapeHtml(params.guestName)}</strong>. Esperamos que hayas disfrutado tu estadía en ${this.escapeHtml(params.hotelName)} (${formatDate(params.stayDate)}).
+        Hola, <strong>${this.escapeHtml(params.guestName)}</strong>. Esperamos que hayas disfrutado tu estadÃ­a en ${this.escapeHtml(params.hotelName)} (${formatDate(params.stayDate)}).
       </p>
       <p style="font-size: 15px; color: #555;">
-        Nos encantaría conocer tu opinión — toma 2 minutos:
+        Nos encantarÃ­a conocer tu opiniÃ³n â€” toma 2 minutos:
       </p>
       <div style="text-align: center; margin: 32px 0;">
-        <a href="${params.reviewLink}" style="display:inline-block; background:#c4623f; color:#faf7f2; padding:12px 28px; border-radius:8px; text-decoration:none; font-family:Geist,Arial,sans-serif; font-size:16px; font-weight:600;">Dejar mi reseña</a>
+        <a href="${params.reviewLink}" style="display:inline-block; background:#c4623f; color:#faf7f2; padding:12px 28px; border-radius:8px; text-decoration:none; font-family:Geist,Arial,sans-serif; font-size:16px; font-weight:600;">Dejar mi reseÃ±a</a>
       </div>
       <p style="font-size: 12px; color: #8a7d6e; text-align: center; margin-bottom: 0;">
-        Este enlace expira en 90 días.
+        Este enlace expira en 90 dÃ­as.
       </p>
     </div>
   </div>
@@ -254,8 +254,8 @@ export class EmailService {
    */
   private formatContactPreference(pref: 'EMAIL' | 'PHONE' | 'WHATSAPP'): string {
     const labels: Record<'EMAIL' | 'PHONE' | 'WHATSAPP', string> = {
-      EMAIL: 'Correo electrónico',
-      PHONE: 'Teléfono',
+      EMAIL: 'Correo electrÃ³nico',
+      PHONE: 'TelÃ©fono',
       WHATSAPP: 'WhatsApp',
     };
     return labels[pref];
@@ -265,8 +265,8 @@ export class EmailService {
    * Build the "Sus preferencias" conditional section.
    * Returns empty string if none of the 4 optional fields are truthy.
    * Escapes user-provided text (dietaryRestrictions, specialRequests).
-   * whatsappNumber is E.164-validated (only digits + leading +) — no escaping needed.
-   * contactPreference is an enum — server-controlled, no escaping needed.
+   * whatsappNumber is E.164-validated (only digits + leading +) â€” no escaping needed.
+   * contactPreference is an enum â€” server-controlled, no escaping needed.
    */
   private buildPreferencesSection(params: BookingConfirmationParams): string {
     const parts: string[] = [];
@@ -323,24 +323,24 @@ export class EmailService {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Confirmación de reserva</title>
+  <title>ConfirmaciÃ³n de reserva</title>
 </head>
 <body style="font-family: Georgia, serif; background: #f9f5f0; margin: 0; padding: 20px;">
   <div style="max-width: 600px; margin: 0 auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
     <div style="background: #c45a3a; color: #fff; padding: 32px; text-align: center;">
-      <h1 style="margin: 0; font-size: 24px; font-weight: normal;">¡Reserva confirmada!</h1>
+      <h1 style="margin: 0; font-size: 24px; font-weight: normal;">Â¡Reserva confirmada!</h1>
     </div>
     <div style="padding: 32px;">
       <p style="font-size: 16px; color: #333; margin-top: 0;">
-        Hola, <strong>${this.escapeHtml(params.guestName)}</strong>. Tu reserva ha sido confirmada. Aquí están los detalles:
+        Hola, <strong>${this.escapeHtml(params.guestName)}</strong>. Tu reserva ha sido confirmada. AquÃ­ estÃ¡n los detalles:
       </p>
       <table style="width: 100%; border-collapse: collapse; margin: 24px 0;">
         <tr>
-          <td style="padding: 12px 0; border-bottom: 1px solid #f0ebe4; color: #666; font-size: 14px;">Número de reserva</td>
+          <td style="padding: 12px 0; border-bottom: 1px solid #f0ebe4; color: #666; font-size: 14px;">NÃºmero de reserva</td>
           <td style="padding: 12px 0; border-bottom: 1px solid #f0ebe4; color: #333; font-size: 14px; font-weight: bold;">${params.reservationId}</td>
         </tr>
         <tr>
-          <td style="padding: 12px 0; border-bottom: 1px solid #f0ebe4; color: #666; font-size: 14px;">Tipo de habitación</td>
+          <td style="padding: 12px 0; border-bottom: 1px solid #f0ebe4; color: #666; font-size: 14px;">Tipo de habitaciÃ³n</td>
           <td style="padding: 12px 0; border-bottom: 1px solid #f0ebe4; color: #333; font-size: 14px;">${this.escapeHtml(params.roomTypeName)}</td>
         </tr>
         <tr>
@@ -352,7 +352,7 @@ export class EmailService {
           <td style="padding: 12px 0; border-bottom: 1px solid #f0ebe4; color: #333; font-size: 14px;">${formatDate(params.checkOut)}</td>
         </tr>
         <tr>
-          <td style="padding: 12px 0; border-bottom: 1px solid #f0ebe4; color: #666; font-size: 14px;">Número de noches</td>
+          <td style="padding: 12px 0; border-bottom: 1px solid #f0ebe4; color: #666; font-size: 14px;">NÃºmero de noches</td>
           <td style="padding: 12px 0; border-bottom: 1px solid #f0ebe4; color: #333; font-size: 14px;">${params.totalNights}</td>
         </tr>
         <tr>
@@ -365,7 +365,7 @@ export class EmailService {
         Si no recibes este correo en 5 minutos, revisa tu carpeta de spam.
       </p>
       <p style="font-size: 14px; color: #999; margin-bottom: 0;">
-        Gracias por elegir nuestro hotel. ¡Te esperamos!
+        Gracias por elegir nuestro hotel. Â¡Te esperamos!
       </p>
     </div>
   </div>
