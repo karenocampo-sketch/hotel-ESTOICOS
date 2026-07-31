@@ -1,8 +1,8 @@
-# Plan de Reparación HotelOS AI — Sprint de Mantenimiento v1.5.1
+# Plan de Reparación Hotel Estoicos — Sprint de Mantenimiento v1.5.1
 # Versión Extendida: QA Multi-Nivel + Revisiones de Código + Pruebas Exhaustivas
 
 **Fecha:** 2026-06-16  
-**Proyecto:** HotelOS AI (Single-tenant PMS para hotel en Colombia)  
+**Proyecto:** Hotel Estoicos (Single-tenant PMS para hotel en Colombia)  
 **Scope:** Todos los bugs abiertos identificados en QA sessions (v1.3 bug hunt + QA 2026-06-12)  
 **Total Bugs:** 10 (7 CRÍTICOS/ALTO + 2 NUEVOS POST 500 + 1 UX)  
 **Tests Base:** 1,475 pasan (1,034 backend + 444 frontend) | 3 fallan (jsdom drag)  

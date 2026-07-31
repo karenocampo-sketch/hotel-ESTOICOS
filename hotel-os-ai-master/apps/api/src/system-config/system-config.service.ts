@@ -28,7 +28,7 @@ export class SystemConfigService {
 
   async getHotelName(): Promise<string> {
     const config = await this.getConfig();
-    return config?.hotelName ?? 'HotelOS AI';
+    return config?.hotelName ?? 'Hotel Estoicos';
   }
 
   /**

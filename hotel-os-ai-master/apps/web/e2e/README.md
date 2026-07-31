@@ -1,6 +1,6 @@
 # E2E Tests (Playwright)
 
-End-to-end test suite for HotelOS AI web application.
+End-to-end test suite for Hotel Estoicos web application.
 
 ## Prerequisites
 

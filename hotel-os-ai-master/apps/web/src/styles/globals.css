@@ -1,8 +1,8 @@
 /* =============================================================
-   HotelOS AI — Global Styles
+   Hotel Estoicos — Global Styles
    Tailwind v4: CSS-native config via @theme inline (no tailwind.config.ts)
    Token source of truth: .hos block (light) + .hos[data-theme="dark"] block
-   Bundle source: .design-fetch/hotelos-ai/project/tokens.jsx (lines 18-91)
+   Bundle source: .design-fetch/Hotel Estoicos-ai/project/tokens.jsx (lines 18-91)
    TypeScript mirror: src/design/tokens.ts (same values)
    tokens.spec.ts enforces that tokens.ts matches the bundle verbatim
    ============================================================= */

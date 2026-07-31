@@ -1,18 +1,18 @@
-# HotelOS AI — Design System
+# Hotel Estoicos — Design System
 
 **Source:** Claude Design mockups (HTML + 11 screenshots)
 **Captured:** 2026-05-13
 **Reference files:**
-- `design/HotelOS AI.html` (loader shell, references external JSX not exported)
+- `design/Hotel Estoicos.html` (loader shell, references external JSX not exported)
 - `design/screenshots/` (11 PNG captures of all screens)
 
-This document is the **canonical design contract** for HotelOS AI. Every UI phase MUST conform to these tokens and patterns.
+This document is the **canonical design contract** for Hotel Estoicos. Every UI phase MUST conform to these tokens and patterns.
 
 ---
 
 ## 1. Brand
 
-- **Product name:** HotelOS AI (logo: "HotelOS" sans + " AI" in serif italic)
+- **Product name:** Hotel Estoicos (logo: "Hotel Estoicos" sans + " AI" in serif italic)
 - **Demo hotel:** "Hotel Sumapaz" — Bogotá, Colombia (used in mockups; real hotel name is configurable)
 - **Logo mark:** Letter "H" in terracotta rounded square (~8px radius)
 - **Tone:** Hospitality — warm, professional, calm, Colombian-aware. NOT clinical SaaS-cold.
@@ -112,7 +112,7 @@ This document is the **canonical design contract** for HotelOS AI. Every UI phas
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│ [H] HotelOS AI  │ Operación > [breadcrumb] │ [⌘K search] │ 🔔 👤 │
+│ [H] Hotel Estoicos  │ Operación > [breadcrumb] │ [⌘K search] │ 🔔 👤 │
 ├──────────────────┬──────────────────────────────────────────┤
 │                  │                                          │
 │  OPERACIÓN       │                                          │

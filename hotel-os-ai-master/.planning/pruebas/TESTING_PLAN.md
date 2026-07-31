@@ -1,4 +1,4 @@
-# Plan de Pruebas HotelOS AI
+# Plan de Pruebas Hotel Estoicos
 
 > Versión actualizada al estado real del repositorio (2026-06-12).
 > El plan anterior quedó desactualizado: reportaba 5 specs de backend y 0 de frontend/E2E, cuando en realidad el proyecto ya cuenta con cobertura significativa. Esta versión parte del inventario real de tests e identifica **gaps** en lugar de proponer duplicados.
@@ -75,7 +75,7 @@
 
 **Flujo mínimo a cubrir:**
 ```typescript
-describe('HotelOS AI Integration', () => {
+describe('Hotel Estoicos Integration', () => {
   it('flujo crítico: login → crear room → reservar → check-in → check-out', async () => {
     // 1. POST /api/auth/login → obtener accessToken + refresh cookie
     // 2. POST /api/inventory/room-types
@@ -89,7 +89,7 @@ describe('HotelOS AI Integration', () => {
 });
 ```
 
-> **Nota técnica:** los tests deben usar una base de datos de test aislada (por ejemplo, `hotelos_test`) y hacer `truncate` o `prisma migrate reset --force` en `beforeAll`/`afterAll`. Nunca apuntar a la DB de desarrollo.
+> **Nota técnica:** los tests deben usar una base de datos de test aislada (por ejemplo, `hotel_estoicos_test`) y hacer `truncate` o `prisma migrate reset --force` en `beforeAll`/`afterAll`. Nunca apuntar a la DB de desarrollo.
 
 ---
 

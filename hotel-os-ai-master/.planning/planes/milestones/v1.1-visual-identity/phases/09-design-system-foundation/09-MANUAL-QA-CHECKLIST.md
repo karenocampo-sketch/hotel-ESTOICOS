@@ -19,7 +19,7 @@ Verificar que el sistema de diseño está correctamente implementado y documenta
 - [ ] Tabs — List, Trigger, Content
 - [ ] Toast — Title, Description, Action, Variants
 
-### Componentes Custom HotelOS
+### Componentes Custom Hotel Estoicos
 - [ ] Sidebar — Navigation, Collapsible, Responsive
 - [ ] Header — Logo, User Menu, Notifications
 - [ ] Data Table — Sorting, Filtering, Pagination

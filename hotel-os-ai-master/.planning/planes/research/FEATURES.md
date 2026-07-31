@@ -86,7 +86,7 @@ Features staff and guests assume exist. Missing these means the product is not u
 
 ### Differentiators (Competitive Advantage)
 
-Features that set HotelOS AI apart. Not universally expected, but valued.
+Features that set Hotel Estoicos apart. Not universally expected, but valued.
 
 | Feature | Value Proposition | Complexity | v1 Coverage | Notes |
 |---------|-------------------|------------|-------------|-------|
@@ -246,7 +246,7 @@ Features to add once core workflow is operational and trusted.
 
 Reference products studied: Cloudbeds, Mews, Hotelogix, RoomRaccoon, Little Hotelier.
 
-| Feature | Cloudbeds / Mews | Hotelogix / Little Hotelier | HotelOS AI v1 Approach |
+| Feature | Cloudbeds / Mews | Hotelogix / Little Hotelier | Hotel Estoicos v1 Approach |
 |---------|------------------|-----------------------------|------------------------|
 | Room rack / tape chart | Full drag-and-drop grid | Basic grid | Grid view (click-to-create; drag-and-drop in v1.x) |
 | Night audit | Automated, one-click | Automated | Automated (cron job, nightly batch) |

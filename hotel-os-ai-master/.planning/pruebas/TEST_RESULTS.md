@@ -1,4 +1,4 @@
-# Documento de Respuestas de Pruebas — HotelOS AI
+# Documento de Respuestas de Pruebas — Hotel Estoicos
 
 ## Resumen Ejecutivo
 
@@ -161,7 +161,7 @@ Se ejecutó el script `apps/api/prisma/seed-demo-data.ts` para poblar la base de
 |------------|-----|--------|
 | **Backend NestJS** | http://localhost:3003 | ✅ Levantado |
 | **Frontend React** | http://localhost:5180 | ✅ Levantado |
-| **PostgreSQL 18** | localhost:5432/hotelos_db | ✅ Conectado |
+| **PostgreSQL 18** | localhost:5432/hotel_estoicos_db | ✅ Conectado |
 | **Login API** | POST /api/auth/login | ✅ Funcionando |
 
 ### Verificación de Endpoints en Vivo

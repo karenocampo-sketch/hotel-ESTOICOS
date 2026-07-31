@@ -1,4 +1,4 @@
-# HotelOS AI — Documentación del Proyecto
+# Hotel Estoicos — Documentación del Proyecto
 
 > Última actualización: 2026-06-18
 > Versión actual: v1.6

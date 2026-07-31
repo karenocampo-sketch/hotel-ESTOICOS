@@ -4,7 +4,7 @@
 # positives: placeholder values in .env.example files, JWT-shaped strings in
 # test fixtures, and token-shaped strings in planning documentation.
 
-title = "HotelOS AI gitleaks config"
+title = "Hotel Estoicos gitleaks config"
 
 [allowlist]
   description = "Known false positives — placeholders, test fixtures, planning docs"

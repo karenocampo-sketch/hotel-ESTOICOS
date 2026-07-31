@@ -788,7 +788,7 @@ These two items take < 20 lines total and unblock Wave 2 parallel execution.
 - `.planning/STATE.md` — Phase 9 decisions (warm-line behavior, dark mode, token aliases)
 - `.planning/phases/09-design-system-foundation/09-04-SUMMARY.md` — exports verified
 - `.planning/phases/10-public-portal/10-05-SUMMARY.md` — restyle pattern precedent (concierge)
-- `.design-fetch/hotelos-ai/project/tokens.jsx` lines 105-200 — chrome primitives verified
+- `.design-fetch/Hotel Estoicos-ai/project/tokens.jsx` lines 105-200 — chrome primitives verified
 
 ### Secondary (MEDIUM confidence)
 - Recharts v2 `shape` prop on `<Bar>`: documented in Recharts v2 API. Custom bar rendering verified via codebase pattern inspection.

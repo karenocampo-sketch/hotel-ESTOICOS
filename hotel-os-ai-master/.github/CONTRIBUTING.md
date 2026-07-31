@@ -1,4 +1,4 @@
-# Contributing to HotelOS AI
+# Contributing to Hotel Estoicos
 
 ## CI Overview
 

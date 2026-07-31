@@ -1,4 +1,4 @@
-# Branch Protection Settings — HotelOS AI
+# Branch Protection Settings — Hotel Estoicos
 
 > **Required settings for `master` branch** (manual configuration in GitHub UI).
 > This file documents the intended configuration; it does NOT auto-apply settings.

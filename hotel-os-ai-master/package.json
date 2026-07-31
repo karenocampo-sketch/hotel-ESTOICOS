@@ -1,5 +1,5 @@
 {
-  "name": "hotel-os",
+  "name": "hotel-estoicos",
   "private": true,
   "scripts": {
     "dev": "turbo dev",

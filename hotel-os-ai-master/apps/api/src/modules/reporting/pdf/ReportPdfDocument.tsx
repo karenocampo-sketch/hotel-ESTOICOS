@@ -275,7 +275,7 @@ export const ReportPdfDocument: React.FC<ReportPdfProps> = ({
         {/* ── Footer ──────────────────────────────────────────────────────── */}
         <View style={styles.footer}>
           <Text style={styles.footerNote}>
-            HotelOS AI — documento generado automáticamente
+            Hotel Estoicos — documento generado automáticamente
           </Text>
           <Text
             style={styles.pageNumber}

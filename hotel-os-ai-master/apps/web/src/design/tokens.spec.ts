@@ -2,7 +2,7 @@
  * tokens.spec.ts — Bundle token sync enforcement
  *
  * Validates that tokens.ts mirrors the canonical Claude Design bundle palette
- * verbatim (names + hex values from .design-fetch/hotelos-ai/project/tokens.jsx).
+ * verbatim (names + hex values from .design-fetch/Hotel Estoicos-ai/project/tokens.jsx).
  *
  * RED: fails against v1.0 tokens.ts (wrong names + wrong hex values)
  * GREEN: passes after tokens.ts is rewritten with bundle palette

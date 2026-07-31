@@ -1,6 +1,6 @@
-# HotelOS AI — Requirements v1
+# Hotel Estoicos — Requirements v1
 
-**Project:** HotelOS AI — Single-tenant Hotel PMS + Booking Engine + Dual AI Assistants
+**Project:** Hotel Estoicos — Single-tenant Hotel PMS + Booking Engine + Dual AI Assistants
 **Version:** v1 (MVP)
 **Status:** Active (hypotheses — ship to validate)
 **Last updated:** 2026-05-13

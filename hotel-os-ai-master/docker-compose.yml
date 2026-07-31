@@ -5,7 +5,7 @@ services:
     image: postgres:16-alpine
     restart: always
     environment:
-      POSTGRES_DB: hotelos_db
+      POSTGRES_DB: hotel_estoicos_db
       POSTGRES_USER: user
       POSTGRES_PASSWORD: 123456
     volumes:
@@ -13,7 +13,7 @@ services:
     ports:
       - "5432:5432"
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U user -d hotelos_db"]
+      test: ["CMD-SHELL", "pg_isready -U user -d hotel_estoicos_db"]
       interval: 5s
       timeout: 5s
       retries: 5
@@ -24,7 +24,7 @@ services:
       dockerfile: apps/api/Dockerfile
       target: development # Use the development stage to ensure all dependencies are available
     environment:
-      DATABASE_URL: postgresql://user:123456@db:5432/hotelos_db?schema=public
+      DATABASE_URL: postgresql://user:123456@db:5432/hotel_estoicos_db?schema=public
     depends_on:
       db:
         condition: service_healthy
@@ -38,7 +38,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      DATABASE_URL: postgresql://user:123456@db:5432/hotelos_db?schema=public
+      DATABASE_URL: postgresql://user:123456@db:5432/hotel_estoicos_db?schema=public
       # Add other API environment variables here
     depends_on:
       db:

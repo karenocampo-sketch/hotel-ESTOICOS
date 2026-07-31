@@ -1,8 +1,8 @@
 /**
- * tokens.ts — Single source of truth for HotelOS AI design tokens
+ * tokens.ts — Single source of truth for Hotel Estoicos design tokens
  *
  * These values are the canonical TypeScript representation of the Claude Design
- * bundle palette from .design-fetch/hotelos-ai/project/tokens.jsx (lines 18-91).
+ * bundle palette from .design-fetch/Hotel Estoicos-ai/project/tokens.jsx (lines 18-91).
  * The hex values here MUST match the .hos block in src/styles/globals.css exactly.
  * tokens.spec.ts enforces this constraint on every CI run.
  *

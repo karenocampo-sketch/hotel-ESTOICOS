@@ -587,7 +587,7 @@ For Phase 9, `@import` in globals.css is the recommended approach (consistency w
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HotelOS AI</title>
+  <title>Hotel Estoicos</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 </head>
 <body>
@@ -804,7 +804,7 @@ This demo page is the acceptance-criteria "screen" for Phase 9. It proves: fonts
 ## Sources
 
 ### Primary (HIGH confidence)
-- `C:\Users\Admin\Desktop\Proyectos\Hotel\.design-fetch\hotelos-ai\project\tokens.jsx` — canonical bundle; all hex values transcribed verbatim
+- `C:\Users\Admin\Desktop\Proyectos\Hotel\.design-fetch\Hotel Estoicos-ai\project\tokens.jsx` — canonical bundle; all hex values transcribed verbatim
 - `C:\Users\Admin\Desktop\Proyectos\Hotel\apps\web\src\styles\globals.css` — current token layer; existing `@theme inline` pattern confirmed correct for Tailwind v4
 - `C:\Users\Admin\Desktop\Proyectos\Hotel\apps\web\src\design\tokens.ts` — current TS mirror; all v1.0 token names identified
 - `C:\Users\Admin\Desktop\Proyectos\Hotel\apps\web\src\design\tokens.spec.ts` — sync enforcement tests; must be rewritten

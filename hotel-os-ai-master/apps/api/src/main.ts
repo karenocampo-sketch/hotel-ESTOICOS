@@ -61,7 +61,7 @@ async function bootstrap() {
   // WEB_ORIGIN env var: comma-separated list of allowed origins.
   // Default includes the production web URL + localhost dev server.
   const defaultOrigins = [
-    'https://hotel-os-web-production.up.railway.app',
+    'https://hotel-estoicos-web-production.up.railway.app',
     'http://localhost:5173',
   ];
   const corsOrigins = process.env.WEB_ORIGIN

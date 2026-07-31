@@ -170,15 +170,15 @@ Unlike public portal (Phase 10 forced light), staff screens RESPECT `data-theme=
 **Downstream agents MUST read these before planning or implementing.**
 
 ### Design source (locked — bundle is verbatim visual source of truth)
-- `.design-fetch/hotelos-ai/project/screens/login.jsx` — split-panel layout for INT-01
-- `.design-fetch/hotelos-ai/project/screens/dashboard.jsx` — KPI + Recharts for INT-02
-- `.design-fetch/hotelos-ai/project/screens/calendar.jsx` — room rack visual for INT-03
-- `.design-fetch/hotelos-ai/project/screens/rooms.jsx` — grid + drawer for INT-04
-- `.design-fetch/hotelos-ai/project/screens/reservations.jsx` — wizard stepper for INT-05
-- `.design-fetch/hotelos-ai/project/screens/operations.jsx` — kanban for INT-06
-- `.design-fetch/hotelos-ai/project/screens/internal-chat.jsx` — staff chat + context panel for INT-07
-- `.design-fetch/hotelos-ai/project/tokens.jsx` — chrome primitives (`hos-app`, `hos-sidebar`, `hos-topbar`, `hos-nav`, etc.) for INT-08; lines 105-200 are the chrome layout reference
-- `.design-fetch/hotelos-ai/chats/chat1.md` — design rationale
+- `.design-fetch/Hotel Estoicos-ai/project/screens/login.jsx` — split-panel layout for INT-01
+- `.design-fetch/Hotel Estoicos-ai/project/screens/dashboard.jsx` — KPI + Recharts for INT-02
+- `.design-fetch/Hotel Estoicos-ai/project/screens/calendar.jsx` — room rack visual for INT-03
+- `.design-fetch/Hotel Estoicos-ai/project/screens/rooms.jsx` — grid + drawer for INT-04
+- `.design-fetch/Hotel Estoicos-ai/project/screens/reservations.jsx` — wizard stepper for INT-05
+- `.design-fetch/Hotel Estoicos-ai/project/screens/operations.jsx` — kanban for INT-06
+- `.design-fetch/Hotel Estoicos-ai/project/screens/internal-chat.jsx` — staff chat + context panel for INT-07
+- `.design-fetch/Hotel Estoicos-ai/project/tokens.jsx` — chrome primitives (`hos-app`, `hos-sidebar`, `hos-topbar`, `hos-nav`, etc.) for INT-08; lines 105-200 are the chrome layout reference
+- `.design-fetch/Hotel Estoicos-ai/chats/chat1.md` — design rationale
 
 ### Project requirements
 - `.planning/REQUIREMENTS.md` — INT-01..08

@@ -1,5 +1,5 @@
 /**
- * Date utility helpers for HotelOS.
+ * Date utility helpers for Hotel Estoicos.
  *
  * CRITICAL — timezone pitfall (D-15):
  * Hotel business dates are LOCAL calendar dates, not UTC.

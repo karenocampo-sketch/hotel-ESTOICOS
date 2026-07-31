@@ -288,7 +288,7 @@ Data protection is treated as a legal problem, not a technical one. No one desig
 
 **How to avoid:**
 
-1. **Classify PII at schema design time**: Mark which fields are PII in the schema comments/documentation. For HotelOS: `Guest.full_name`, `Guest.email`, `Guest.phone`, `Guest.document_type`, `Guest.document_number`, `Guest.nationality` are all PII.
+1. **Classify PII at schema design time**: Mark which fields are PII in the schema comments/documentation. For Hotel Estoicos: `Guest.full_name`, `Guest.email`, `Guest.phone`, `Guest.document_type`, `Guest.document_number`, `Guest.nationality` are all PII.
 
 2. **Implement guest anonymization** (not deletion): When a guest requests erasure, replace PII fields with anonymized values (`"DELETED_USER_${hash}"`) and set a `anonymized_at` timestamp. Historical reservation records (dates, room, total) can be retained for financial/tax compliance — only the identifying information is removed. Colombia's tax retention requirement is 5 years (Estatuto Tributario Art. 632).
 
@@ -443,5 +443,5 @@ Data protection is treated as a legal problem, not a technical one. No one desig
 - [Rate Management Mistakes — Axisrooms](https://blog.axisrooms.com/hotel-rate-management-mistakes/)
 
 ---
-*Pitfalls research for: Hotel PMS + Booking Engine + AI Assistant (HotelOS AI)*
+*Pitfalls research for: Hotel PMS + Booking Engine + AI Assistant (Hotel Estoicos)*
 *Researched: 2026-05-13*

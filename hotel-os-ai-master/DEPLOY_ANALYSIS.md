@@ -1,4 +1,4 @@
-# Análisis de Deploy Railway — HotelOS AI v1.7.0
+# Análisis de Deploy Railway — Hotel Estoicos v1.7.0
 
 ## Estado Actual del Deploy
 
@@ -70,8 +70,8 @@ pnpm --filter @hotel/web build
 
 ### 2. Deploy en Railway Dashboard
 1. Ir a https://railway.app/dashboard
-2. Seleccionar proyecto HotelOS AI
-3. Verificar que esté conectado a GitHub repo `softwarevalle75-wq/hotel-os-ai`
+2. Seleccionar proyecto Hotel Estoicos
+3. Verificar que esté conectado a GitHub repo `softwarevalle75-wq/hotel-estoicos`
 4. Click "Redeploy" o esperar auto-deploy de master
 
 ### 3. Post-deploy (verificación)

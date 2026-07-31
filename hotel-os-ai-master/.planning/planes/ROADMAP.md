@@ -1,10 +1,10 @@
-# Roadmap: HotelOS AI
+# Roadmap: Hotel Estoicos
 
 ## Overview
 
-HotelOS AI is built across two milestones. **v1.0** (Phases 1–8) delivered the complete functional PMS — auth, inventory, pricing, guests, reservations, operations, housekeeping, reporting, staff AI, and public concierge. All 26 plans across 8 phases are done.
+Hotel Estoicos is built across two milestones. **v1.0** (Phases 1–8) delivered the complete functional PMS — auth, inventory, pricing, guests, reservations, operations, housekeeping, reporting, staff AI, and public concierge. All 26 plans across 8 phases are done.
 
-**v1.1** (Phases 9–11) applies the Claude Design bundle visual identity to every surface of the application. The backend is untouched; the entire milestone lives in `apps/web`. The design source of truth is `.design-fetch/hotelos-ai/project/` — token values, screen layouts, component anatomy, and typography come from that bundle. Phase 9 establishes the token foundation that Phases 10 and 11 consume. Phase 10 replaces the bare booking landing with an Airbnb-style public portal. Phase 11 restyles all internal PMS screens. Execution order is strictly sequential: 9 → 10 → 11.
+**v1.1** (Phases 9–11) applies the Claude Design bundle visual identity to every surface of the application. The backend is untouched; the entire milestone lives in `apps/web`. The design source of truth is `.design-fetch/Hotel Estoicos-ai/project/` — token values, screen layouts, component anatomy, and typography come from that bundle. Phase 9 establishes the token foundation that Phases 10 and 11 consume. Phase 10 replaces the bare booking landing with an Airbnb-style public portal. Phase 11 restyles all internal PMS screens. Execution order is strictly sequential: 9 → 10 → 11.
 
 ## Phases
 
@@ -198,7 +198,7 @@ Plans:
 ## v1.1 Phases — Visual Identity Implementation
 
 > **Scope constraint**: All three phases touch `apps/web` only. No backend (`apps/api`) changes unless Phase 10 requires a minor system-config endpoint to expose `hotelName` / photo URLs — that is the only acceptable exception.
-> **Design source of truth**: `.design-fetch/hotelos-ai/project/` (tokens.jsx, screens/*.jsx)
+> **Design source of truth**: `.design-fetch/Hotel Estoicos-ai/project/` (tokens.jsx, screens/*.jsx)
 > **Hotel name**: `system_config.hotelName` ("Mi Hotel Boutique"). The bundle uses "Hotel Sumapaz" as a design placeholder — do not hard-code it.
 > **Dark mode**: VIS-03 is in scope. Language toggle (🌐) deferred to v1.2.
 

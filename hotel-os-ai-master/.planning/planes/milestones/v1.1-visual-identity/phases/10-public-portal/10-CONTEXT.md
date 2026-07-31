@@ -2,7 +2,7 @@
 
 **Gathered:** 2026-05-17
 **Status:** Ready for planning
-**Source:** Auto-derived from Claude Design bundle (`.design-fetch/hotelos-ai/project/screens/portal.jsx`) + REQUIREMENTS.md (PUB-07..13)
+**Source:** Auto-derived from Claude Design bundle (`.design-fetch/Hotel Estoicos-ai/project/screens/portal.jsx`) + REQUIREMENTS.md (PUB-07..13)
 
 <domain>
 ## Phase Boundary
@@ -112,9 +112,9 @@ Single React component, single route. Six in-page sections in order:
 ## Canonical References
 
 ### Design source (locked — bundle is verbatim source of truth)
-- `.design-fetch/hotelos-ai/project/screens/portal.jsx` — 615 lines. Mobile section (lines 5-200), Desktop section (lines 200-615). Both must render the same content; only layout differs.
-- `.design-fetch/hotelos-ai/project/tokens.jsx` — token reference; Phase 9 already plumbed these — use the existing utility classes
-- `.design-fetch/hotelos-ai/chats/chat1.md` — design rationale (mobile-first reasoning, Airbnb comparison, why warm palette)
+- `.design-fetch/Hotel Estoicos-ai/project/screens/portal.jsx` — 615 lines. Mobile section (lines 5-200), Desktop section (lines 200-615). Both must render the same content; only layout differs.
+- `.design-fetch/Hotel Estoicos-ai/project/tokens.jsx` — token reference; Phase 9 already plumbed these — use the existing utility classes
+- `.design-fetch/Hotel Estoicos-ai/chats/chat1.md` — design rationale (mobile-first reasoning, Airbnb comparison, why warm palette)
 - `.planning/phases/09-design-system-foundation/09-01-SUMMARY.md` through `09-04-SUMMARY.md` — token vocabulary, primitive APIs, useTheme hook usage
 
 ### Project requirements

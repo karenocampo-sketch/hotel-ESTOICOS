@@ -25,7 +25,7 @@ v1_7_progress:
 ## Project Reference
 
 See: .planning/PROJECT.md (updated 2026-05-17 — v1.1 Visual Identity milestone started)
-Design source of truth: .design-fetch/hotelos-ai/project/ (tokens.jsx, screens/*.jsx)
+Design source of truth: .design-fetch/Hotel Estoicos-ai/project/ (tokens.jsx, screens/*.jsx)
 
 **Core value:** Staff can manage reservations, check-in/out, rooms, and daily operations from one web interface, complemented by two AI assistants — one internal that answers PMS questions and one public that helps guests discover Bogotá
 **Current focus:** Phase 09 — Design System Foundation (v1.1)
@@ -253,7 +253,7 @@ Most recent decisions affecting current work:
 
 ### v1.1 Context (Design Bundle)
 
-- **Token source**: `.design-fetch/hotelos-ai/project/tokens.jsx` — CSS variables defined under `.hos` root class. Dark variant under `.hos[data-theme="dark"]`.
+- **Token source**: `.design-fetch/Hotel Estoicos-ai/project/tokens.jsx` — CSS variables defined under `.hos` root class. Dark variant under `.hos[data-theme="dark"]`.
 - **Font stack**: `'Instrument Serif'` (display/h1-h3, italic-capable), `'Geist'` (body), `'Geist Mono'` (numerics/mono)
 - **Google Fonts import**: `@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap')`
 - **Key palette tokens**: `--warm-paper: #f4efe6`, `--warm-cream: #ede5d6`, `--ink-1: #2a221a`, `--terracotta: #c4623f`, `--terracotta-deep: #9d4a2e`, `--mustard: #d4a23a`, `--olive: #6b7a3d`

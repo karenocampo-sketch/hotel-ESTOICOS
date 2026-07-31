@@ -24,9 +24,9 @@ export function HotelBranding({ hotelName = 'Hotel Sumapaz', city, size = 'md' }
         <div className={`${logoSize} bg-terracotta rounded-lg flex items-center justify-center`}>
           <span className={`text-text-inverse font-bold ${logoText} leading-none`}>H</span>
         </div>
-        {/* Wordmark: "HotelOS" sans-serif + "AI" serif italic (D-23) */}
+        {/* Wordmark: "Hotel Estoicos" sans-serif + "AI" serif italic (D-23) */}
         <span className={`font-body font-semibold text-ink-1 ${wordmarkText}`}>
-          HotelOS{' '}
+          Hotel Estoicos{' '}
           <em className="font-display italic not-italic">AI</em>
         </span>
       </div>

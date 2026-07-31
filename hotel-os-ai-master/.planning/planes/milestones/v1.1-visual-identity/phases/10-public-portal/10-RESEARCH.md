@@ -483,7 +483,7 @@ The `scroll-mt-*` Tailwind utility sets `scroll-margin-top`, which the browser r
 
 **What goes wrong:** Portal components use `hos-pill`, `hos-card`, `hos-btn`, and `hos-avatar` class names (from the bundle design) but these generate no CSS — they are in `tokens.jsx` but were NOT ported to `globals.css` in Phase 9.
 **Why it happens:** Phase 9 ported CSS tokens and `@theme inline` mapping, but not the bundle's utility class definitions (`.hos-card`, `.hos-btn`, `.hos-pill`, `.hos-avatar`, `.hos-logo-mark`). These were in the `tokens.jsx` script block injected into the design canvas, not recognized as production utility classes.
-**How to avoid:** Wave 0 of Phase 10 MUST add these utility classes to `globals.css`. The exact CSS is available in `.design-fetch/hotelos-ai/project/tokens.jsx` lines 219-270. Alternatively, implement each as a Tailwind utility composition with `@layer utilities` (recommended for Tailwind v4 approach) rather than using the raw class names.
+**How to avoid:** Wave 0 of Phase 10 MUST add these utility classes to `globals.css`. The exact CSS is available in `.design-fetch/Hotel Estoicos-ai/project/tokens.jsx` lines 219-270. Alternatively, implement each as a Tailwind utility composition with `@layer utilities` (recommended for Tailwind v4 approach) rather than using the raw class names.
 **Recommendation:** Use Tailwind utilities directly in components (avoids the global CSS dependency), reserving `hos-pill` and `hos-card` only where the semantic name improves readability.
 
 ---
@@ -811,8 +811,8 @@ apps/web/public/hotel-photos/
 - `apps/web/src/layouts/PublicConciergeLayout.tsx` — full restyle delta documented
 - `apps/web/src/styles/globals.css` — token vocabulary confirmed, hos-utility class absence confirmed
 - `apps/web/package.json` — all dependency versions confirmed
-- `.design-fetch/hotelos-ai/project/tokens.jsx` — `hos-pill`, `hos-card`, `hos-btn`, `hos-avatar`, `hos-logo-mark` CSS definitions
-- `.design-fetch/hotelos-ai/project/screens/portal.jsx` — gallery grid dimensions, nav items, section structure, review data, room type data
+- `.design-fetch/Hotel Estoicos-ai/project/tokens.jsx` — `hos-pill`, `hos-card`, `hos-btn`, `hos-avatar`, `hos-logo-mark` CSS definitions
+- `.design-fetch/Hotel Estoicos-ai/project/screens/portal.jsx` — gallery grid dimensions, nav items, section structure, review data, room type data
 - `apps/web/src/hooks/useTheme.ts` — theme mechanism confirmed (data-theme on documentElement)
 - `.planning/phases/09-design-system-foundation/09-04-SUMMARY.md` — Phase 9 closeout confirmed, exported primitives verified
 

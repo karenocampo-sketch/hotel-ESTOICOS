@@ -1,4 +1,4 @@
-# BRECHAS DE DOCUMENTACIÓN — HotelOS AI
+# BRECHAS DE DOCUMENTACIÓN — Hotel Estoicos
 
 > Documento generado: 2026-06-18
 > Versión analizada: v1.6 (23 fases completadas)

@@ -56,4 +56,4 @@ Actúa como un Director de Proyectos de Software y Scrum Master de élite, espec
 
 ---
 *Establecido: 2026-06-17*
-*Aplicación: Todos los agentes del proyecto HotelOS AI*
+*Aplicación: Todos los agentes del proyecto Hotel Estoicos*

@@ -1,8 +1,8 @@
-# HotelOS AI
+# Hotel Estoicos
 
 ## What This Is
 
-HotelOS AI es un **sistema operativo hotelero single-tenant** para un hotel específico en Colombia (no SaaS multi-hotel). Cubre tres audiencias:
+Hotel Estoicos es un **sistema operativo hotelero single-tenant** para un hotel específico en Colombia (no SaaS multi-hotel). Cubre tres audiencias:
 
 - **Staff del hotel** (PMS — Property Management System): recepción, housekeeping, reservas internas, reportes y administración.
 - **Huéspedes para reservar** (Booking Engine público): búsqueda de disponibilidad y reserva online vía `<dominio-hotel>/portal`.
@@ -93,7 +93,7 @@ Si el core hotelero (Phases 1-6) no funciona, no hay producto. Los asistentes IA
 - **Etapa**: v1.0 MVP shipped (26/26 plans across 8 phases) → arrancando v1.1 visual identity.
 - **Equipo**: Solo el usuario (confirmado).
 - **País de operación**: **Colombia** (confirmado) — implica TRA + IVA 19% + Ley 1581 (habeas data) + COP.
-- **Despliegue**: Railway (back + DB + front estático). Repo: https://github.com/softwarevalle75-wq/hotel-os-ai (privado).
+- **Despliegue**: Railway (back + DB + front estático). Repo: https://github.com/softwarevalle75-wq/hotel-estoicos (privado).
 - **Pagos**: **No** se procesan en v1. El modelo de datos los soporta (campo `paid_status` en reservas) pero no hay integración con pasarela. Pagos reales → v2.
 
 ## Stack (Key Decisions)

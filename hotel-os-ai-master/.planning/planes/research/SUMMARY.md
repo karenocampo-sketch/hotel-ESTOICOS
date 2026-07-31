@@ -1,6 +1,6 @@
 # Project Research Summary
 
-**Project:** HotelOS AI — Single-Tenant Hotel PMS + Booking Engine + AI Assistant
+**Project:** Hotel Estoicos — Single-Tenant Hotel PMS + Booking Engine + AI Assistant
 **Domain:** Hotel Property Management System (hospitality software)
 **Researched:** 2026-05-13
 **Confidence:** HIGH
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-HotelOS AI is a single-tenant hotel operating system covering staff operations (PMS), public-facing reservations (booking engine), and an AI conversational layer over PMS data. Expert implementations of this class of product follow Domain-Driven Design with strict bounded contexts: each operational area (inventory, pricing, reservations, operations, housekeeping, reporting, AI) is isolated behind service interfaces and communicates via domain events or read-only facades. The recommended architecture is a NestJS monolith with clean/hexagonal module boundaries on Railway, with React 18 as the frontend and PostgreSQL as the single data store. This is the correct shape for a single-hotel deployment — complexity is proportional to scope, and the team decision to avoid multi-tenancy, payment gateways, and OTA integrations in v1 is validated by research as the right call.
+Hotel Estoicos is a single-tenant hotel operating system covering staff operations (PMS), public-facing reservations (booking engine), and an AI conversational layer over PMS data. Expert implementations of this class of product follow Domain-Driven Design with strict bounded contexts: each operational area (inventory, pricing, reservations, operations, housekeeping, reporting, AI) is isolated behind service interfaces and communicates via domain events or read-only facades. The recommended architecture is a NestJS monolith with clean/hexagonal module boundaries on Railway, with React 18 as the frontend and PostgreSQL as the single data store. This is the correct shape for a single-hotel deployment — complexity is proportional to scope, and the team decision to avoid multi-tenancy, payment gateways, and OTA integrations in v1 is validated by research as the right call.
 
 Three features from the initial v1 list are missing and are non-negotiable for a working hotel: the **guest folio** (append-only ledger of charges per stay), the **night audit** (daily cron that posts room charges to folios, advances the hotel business date, and marks no-shows), and **TRA Colombia compliance** (Tarjeta de Registro de Alojamiento — a legal export to the Ministerio de Comercio required for every registered guest). These are not nice-to-have additions; the product cannot operate legally or financially without them. All three belong in the operations phase.
 

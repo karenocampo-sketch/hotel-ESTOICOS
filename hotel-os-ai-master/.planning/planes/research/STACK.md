@@ -1,6 +1,6 @@
 # Technology Stack
 
-**Project:** HotelOS AI — Single-tenant Hotel PMS + Booking Engine + AI Assistant
+**Project:** Hotel Estoicos — Single-tenant Hotel PMS + Booking Engine + AI Assistant
 **Researched:** 2026-05-13
 **Research mode:** Ecosystem (confirming existing choices + filling gaps)
 

@@ -18,7 +18,7 @@ export default defineConfig({
   timeout: 60_000,            // 60s per test (remote latency)
 
   use: {
-    baseURL: process.env.E2E_BASE_URL ?? 'https://hotel-os-web-production.up.railway.app',
+    baseURL: process.env.E2E_BASE_URL ?? 'https://hotel-estoicos-web-production.up.railway.app',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     actionTimeout: 15_000,

@@ -1,7 +1,7 @@
 import { defineConfig, devices } from '@playwright/test';
 
 /**
- * Playwright configuration for HotelOS AI E2E tests.
+ * Playwright configuration for Hotel Estoicos E2E tests.
  *
  * Two projects: chromium-desktop (1280x720) and chromium-mobile (Pixel 5).
  * Web server: `vite preview` on port 4173 (requires `pnpm build` first).

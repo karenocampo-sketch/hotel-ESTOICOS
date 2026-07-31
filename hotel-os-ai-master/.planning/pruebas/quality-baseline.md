@@ -1,4 +1,4 @@
-# Quality Baseline — HotelOS AI
+# Quality Baseline — Hotel Estoicos
 
 > **STATUS: PENDING FIRST RUN**
 >

@@ -2,7 +2,7 @@
 
 **Gathered:** 2026-05-17
 **Status:** Ready for planning
-**Source:** Auto-derived from Claude Design bundle (`.design-fetch/hotelos-ai/`) + REQUIREMENTS.md (VIS-01..05)
+**Source:** Auto-derived from Claude Design bundle (`.design-fetch/Hotel Estoicos-ai/`) + REQUIREMENTS.md (VIS-01..05)
 
 <domain>
 ## Phase Boundary
@@ -83,9 +83,9 @@ Every color, font, and status semantic in `apps/web/src/**` must come from a sin
 **Downstream agents MUST read these before planning or implementing.**
 
 ### Design source (locked)
-- `.design-fetch/hotelos-ai/project/tokens.jsx` — Single source of truth. Lines 4-9: typography map. Lines 18-91: full CSS variable definitions (light + dark). Lines 93-103: heading/mono/num utility classes. Lines 105-500: chrome primitives (`.hos-sidebar`, `.hos-topbar`, `.hos-nav`, `.hos-btn`, etc.) — informational only for Phase 9; consumed by Phase 11.
-- `.design-fetch/hotelos-ai/chats/chat1.md` — Design decisions transcript, explains *why* terracotta/mustard/olive/clay over other palettes, why Instrument Serif italic for headings, layout decisions for portal vs PMS.
-- `.design-fetch/hotelos-ai/README.md` — Handoff instructions (already read; not pixel-perfect HTML copy — recreate in React/Tailwind matching visual output).
+- `.design-fetch/Hotel Estoicos-ai/project/tokens.jsx` — Single source of truth. Lines 4-9: typography map. Lines 18-91: full CSS variable definitions (light + dark). Lines 93-103: heading/mono/num utility classes. Lines 105-500: chrome primitives (`.hos-sidebar`, `.hos-topbar`, `.hos-nav`, `.hos-btn`, etc.) — informational only for Phase 9; consumed by Phase 11.
+- `.design-fetch/Hotel Estoicos-ai/chats/chat1.md` — Design decisions transcript, explains *why* terracotta/mustard/olive/clay over other palettes, why Instrument Serif italic for headings, layout decisions for portal vs PMS.
+- `.design-fetch/Hotel Estoicos-ai/README.md` — Handoff instructions (already read; not pixel-perfect HTML copy — recreate in React/Tailwind matching visual output).
 
 ### Project requirements
 - `.planning/REQUIREMENTS.md` — VIS-01 (Tailwind v4 tokens), VIS-02 (Fonts), VIS-03 (Dark mode), VIS-04 (Status colors), VIS-05 (shadcn primitives refactor)

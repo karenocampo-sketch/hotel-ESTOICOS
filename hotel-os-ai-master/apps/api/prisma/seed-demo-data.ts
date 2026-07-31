@@ -1,5 +1,5 @@
 /**
- * Demo data seed for HotelOS AI v1.2
+ * Demo data seed for Hotel Estoicos v1.2
  * Populates ~120 realistic records across all core modules for demos/testing.
  * Idempotent — skips insertion if target tables already have demo data.
  *

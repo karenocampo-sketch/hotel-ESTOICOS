@@ -9,7 +9,7 @@
 
 ## Phase Summary
 
-Phase 14 delivers the Public Reviews System for HotelOS AI v1.2 — the last phase of the milestone. It provides a full vertical slice from post-checkout email invite to guest submission to staff moderation to public portal display. The system uses single-use JWT tokens stored in the `Reservation` table for atomic replay protection; all review moderation goes through a dedicated staff route accessible to every staff role (not just ADMIN); published reviews are served from the real DB via a paginated endpoint with server-side average rating, replacing the hardcoded `data/reviews.ts` that was introduced in v1.1.
+Phase 14 delivers the Public Reviews System for Hotel Estoicos v1.2 — the last phase of the milestone. It provides a full vertical slice from post-checkout email invite to guest submission to staff moderation to public portal display. The system uses single-use JWT tokens stored in the `Reservation` table for atomic replay protection; all review moderation goes through a dedicated staff route accessible to every staff role (not just ADMIN); published reviews are served from the real DB via a paginated endpoint with server-side average rating, replacing the hardcoded `data/reviews.ts` that was introduced in v1.1.
 
 ---
 
