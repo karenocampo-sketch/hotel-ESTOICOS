@@ -1,131 +1,127 @@
-# E2E Tests (Playwright)
+﻿# Tests E2E (Playwright)
 
-End-to-end test suite for Hotel Estoicos web application.
+Suite de tests end-to-end para la aplicacion web de Hotel Estoicos.
 
-## Prerequisites
+## Prerequisitos
 
-1. **Node.js 20+** and **pnpm 10.29+**
-2. **PostgreSQL** running with seeded data
-3. **Chromium browser** installed for Playwright
+1. **Node.js 20+** y **pnpm 10.29+**
+2. **PostgreSQL** ejecutando con datos de seed
+3. **Navegador Chromium** instalado para Playwright
 
-### First-time setup
+### Configuracion inicial
 
 ```bash
-# From repo root
+# Desde la raiz del repositorio
 pnpm install
 
-# Install Playwright browsers (chromium only)
+# Instalar navegadores de Playwright (solo chromium)
 cd apps/web
 npx playwright install --with-deps chromium
 
-# Seed the database (requires API env vars set)
+# Poblar la base de datos (requiere env vars del API configuradas)
 cd ../api
 pnpm seed:admin
 ```
 
-### Environment variables
+### Variables de entorno
 
-| Variable | Default | Description |
+| Variable | Valor por defecto | Descripcion |
 |---|---|---|
-| `E2E_ADMIN_EMAIL` | `admin@hotelsumapaz.co` | Admin user email for login tests |
-| `E2E_ADMIN_PASSWORD` | `Admin123!` | Admin user password |
-| `E2E_BASE_URL` | `http://localhost:4173` | Frontend URL (Vite preview) |
-| `E2E_API_URL` | `http://localhost:3001` | API URL for direct API calls in fixtures |
+| `E2E_ADMIN_EMAIL` | `admin@hotelsumapaz.co` | Email del usuario admin para tests de login |
+| `E2E_ADMIN_PASSWORD` | `Admin123!` | Contrasena del usuario admin |
+| `E2E_BASE_URL` | `http://localhost:4173` | URL del frontend (Vite preview) |
+| `E2E_API_URL` | `http://localhost:3001` | URL del API para llamadas directas en fixtures |
 
-## Running locally
+## Ejecucion local
 
-### Option A: Production build (recommended, matches CI)
+### Opcion A: Build de produccion (recomendado, igual a CI)
 
 ```bash
-# 1. Build the frontend
+# 1. Construir el frontend
 pnpm --filter @hotel/web build
 
-# 2. Start the API in a separate terminal
+# 2. Iniciar el API en una terminal separada
 cd apps/api
 pnpm dev
 
-# 3. Run E2E tests (auto-starts Vite preview server)
+# 3. Ejecutar tests E2E (inicia automaticamente el servidor Vite preview)
 cd apps/web
 npx playwright test
 ```
 
-### Option B: Against dev server
+### Opcion B: Contra el servidor de desarrollo
 
 ```bash
-# 1. Start both API and Web dev servers
+# 1. Iniciar ambos servidores (API y Web)
 pnpm dev
 
-# 2. Run E2E tests against the dev server
+# 2. Ejecutar tests E2E contra el servidor de desarrollo
 cd apps/web
 E2E_BASE_URL=http://localhost:5180 npx playwright test
 ```
 
-### Useful commands
+### Comandos utiles
 
 ```bash
-# Run a specific test file
+# Ejecutar un archivo de test especifico
 npx playwright test smoke-responsive
 
-# Run in headed mode (see the browser)
+# Ejecutar en modo headed (ver el navegador)
 npx playwright test --headed
 
-# Run with Playwright UI (interactive debugger)
+# Ejecutar con UI de Playwright (depurador interactivo)
 npx playwright test --ui
 
-# List all tests without running them
+# Listar todos los tests sin ejecutarlos
 npx playwright test --list
 
-# View the HTML report after a run
+# Ver el reporte HTML despues de una ejecucion
 npx playwright show-report
 ```
 
-## Test files
+## Archivos de test
 
-| File | QSI | Description |
+| Archivo | QSI | Descripcion |
 |---|---|---|
-| `smoke-responsive.spec.ts` | QSI-06 | Public portal at 4 viewports: no horizontal scroll, hero visible, CTA reachable |
-| `login-dashboard-logout.spec.ts` | QSI-07 | Full auth lifecycle: login form -> dashboard -> sidebar logout -> portal |
-| `reservation-wizard.spec.ts` | QSI-08 | 4-step reservation wizard: open, navigate steps, close |
-| `calendar-drag-to-move.spec.ts` | QSI-09 | Room rack DnD: draggable chips, grid cells, drag-and-drop interaction |
-| `error-boundaries.spec.ts` | QSI-10 | Unknown routes, API failures: no white screens |
+| `smoke-responsive.spec.ts` | QSI-06 | Portal publico en 4 viewports: sin scroll horizontal, hero visible, CTA alcanzable |
+| `login-dashboard-logout.spec.ts` | QSI-07 | Ciclo completo de auth: formulario login -> dashboard -> logout del sidebar -> portal |
+| `reservation-wizard.spec.ts` | QSI-08 | Wizard de reserva de 4 pasos: abrir, navegar pasos, cerrar |
+| `calendar-drag-to-move.spec.ts` | QSI-09 | Room rack DnD: chips arrastrables, celdas de grilla, interaccion drag-and-drop |
+| `error-boundaries.spec.ts` | QSI-10 | Rutas desconocidas, fallos del API: sin pantallas blancas |
 
-## CI behavior (QSI-11)
+## Comportamiento en CI (QSI-11)
 
-The E2E job runs in `.github/workflows/ci.yml` as a separate job (`e2e`) that
-depends on the main `ci` job. It only triggers on pull requests to save CI
-minutes on direct pushes to master.
+El job de E2E corre en `.github/workflows/ci.yml` como un job separado (`e2e`) que
+depende del job principal `ci`. Solo se activa en pull requests para ahorrar
+minutos de CI en pushes directos a master.
 
-Steps:
-1. Checkout + install dependencies
-2. Build the web app (`pnpm --filter @hotel/web build`)
-3. Install Playwright chromium
-4. Start a PostgreSQL service container
-5. Run Prisma migrations + seed admin user
-6. Start API + Vite preview in background
-7. Run `npx playwright test`
-8. Upload HTML report as artifact on failure
+Pasos:
+1. Checkout + instalar dependencias
+2. Construir la app web (`pnpm --filter @hotel/web build`)
+3. Instalar chromium de Playwright
+4. Iniciar un contenedor de servicio PostgreSQL
+5. Ejecutar migraciones de Prisma + seed del usuario admin
+6. Iniciar API + Vite preview en segundo plano
+7. Ejecutar `npx playwright test`
+8. Subir reporte HTML como artifact en caso de fallo
 
-Retries: 1 retry on CI to absorb flakes. 0 retries locally.
+Reintentos: 1 reintento en CI para absorber flakes. 0 reintentos localmente.
 
-## data-testid attributes
+## Atributos data-testid
 
-The following `data-testid` attributes were added to production components
-for reliable E2E selection. Each is documented and minimal:
+Los siguientes atributos `data-testid` fueron agregados a los componentes de produccion
+para seleccion E2E confiable. Cada uno esta documentado y es minimal:
 
-| Component | Attribute | Purpose |
+| Componente | Atributo | Proposito |
 |---|---|---|
-| `RoomRackTable.tsx` | `data-testid="rack-grid"` | Outer grid container — verifies calendar rendered |
-| `RoomRackTable.tsx` | `data-testid="rack-cell"` | Each day cell — drop target for DnD |
-| `RoomRackTable.tsx` | `data-testid="rack-event-chip"` | Reservation chip — drag source for DnD |
+| `RoomRackTable.tsx` | `data-testid="rack-grid"` | Contenedor grilla externo - verifica que el calendario se renderizo |
+| `RoomRackTable.tsx` | `data-testid="rack-cell"` | Cada celda de dia - destino de drop para DnD |
+| `RoomRackTable.tsx` | `data-testid="rack-event-chip"` | Chip de reserva - fuente de arrastre para DnD |
 
-## Troubleshooting
+## Solucion de problemas
 
-**Tests fail with "Login failed"**: Ensure the API is running and the admin
-user is seeded with the credentials matching `E2E_ADMIN_EMAIL` / `E2E_ADMIN_PASSWORD`.
+**Los tests fallan con "Login failed"**: Asegurarse de que el API esta ejecutando y que el usuario admin esta configurado con las credenciales que coinciden con `E2E_ADMIN_EMAIL` / `E2E_ADMIN_PASSWORD`.
 
-**Vite preview shows blank page**: Run `pnpm --filter @hotel/web build` first.
-The preview server serves the `dist/` directory which must exist.
+**Vite preview muestra pagina en blanco**: Ejecutar `pnpm --filter @hotel/web build` primero. El servidor preview sirve el directorio `dist/` que debe existir.
 
-**Drag-and-drop test skipped**: The calendar DnD test requires at least one
-reservation in the current 30-day window. Seed reservations via `seed-phase12`
-or create one manually.
+**Test de drag-and-drop saltado**: El test de DnD del calendario requiere al menos una reserva en la ventana de 30 dias actual. Configurar reservas via `seed-phase12` o crear una manualmente.
