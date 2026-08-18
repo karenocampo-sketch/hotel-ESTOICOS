@@ -31,7 +31,7 @@
     "@prisma/adapter-pg": "^7.0.0",
     "@prisma/client": "^6.6.0",
     "@react-pdf/renderer": "^4.5.1",
-    "bcrypt": "^5.1.1",
+    "bcrypt": "^6.0.0",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.15.1",
     "cookie-parser": "^1.4.7",
