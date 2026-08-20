@@ -25,7 +25,7 @@
     "@nestjs/platform-express": "^11.0.0",
     "@nestjs/platform-socket.io": "^11.1.21",
     "@nestjs/schedule": "^5.0.0",
-    "@nestjs/swagger": "^11.0.0",
+    "@nestjs/swagger": "^11.4.5",
     "@nestjs/throttler": "^6.5.0",
     "@nestjs/websockets": "^11.1.21",
     "@prisma/adapter-pg": "^7.0.0",
